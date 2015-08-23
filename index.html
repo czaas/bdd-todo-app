@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="todoApp">
+	
+	<div ng-controller="AddItemContr">
+		<form>
+			<input type="text" ng-model="toBeAdded">
+			<button ng-click="addItemToList(toBeAdded)">Submit</button>
+		</form>
+		
+		<ul>
+			<li ng-repeat="item in todoArray">{{ item  }}</li>
+		</ul>
+	</div>
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
