@@ -9,4 +9,8 @@ todoApp.controller('AddItemContr', function($scope){
 			$scope.toBeAdded = '';
 		}
 	};
+	
+	$scope.remove = function(i){
+		$scope.todoArray.splice(this.$index, 1);
+	};
 });

@@ -1,3 +1,53 @@
-*, *:before, *:after { box-sizing: border-box; }
+body {
+  padding: 0;
+  margin: 0; }
 
-div { width: 50%; display: inline-block; white-space: nowrap; vertical-align: top; }
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+.todoApp {
+  display: flex;
+  flex-flow: row wrap; }
+  .todoApp header {
+    padding: 15px; }
+  .todoApp header {
+    flex: 1 100%;
+    display: flex;
+    border-bottom: 1px solid #ccc; }
+    .todoApp header h1 {
+      flex: 1 70%; }
+    .todoApp header h3 {
+      flex: 1 30%; }
+  .todoApp .lnav, .todoApp .container {
+    flex: 1 50%; }
+  .todoApp .lnav {
+    border-right: 1px solid #ccc;
+    padding: 15px; }
+  .todoApp .container {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch; }
+    .todoApp .container h2, .todoApp .container ul {
+      flex: 1 100%; }
+    .todoApp .container h2 {
+      padding: 15px; }
+    .todoApp .container ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .todoApp .container li {
+      background: #efefef;
+      display: flex; }
+      .todoApp .container li:hover {
+        background: #dfdfdf;
+        cursor: pointer; }
+        .todoApp .container li:hover i.fa {
+          opacity: 1; }
+      .todoApp .container li i.fa {
+        flex: 1 10%;
+        text-align: center;
+        padding: 10px 30px;
+        opacity: 0; }
+      .todoApp .container li span {
+        flex: 1 90%;
+        padding: 10px 30px; }

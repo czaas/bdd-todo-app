@@ -13,6 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.4.4",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
     "karma-jasmine": "^0.3.6"

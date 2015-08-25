@@ -27,11 +27,11 @@ describe('My Todo App', function(){
 			scope.addItemToList('');
 			expect(scope.todoArray.length).toBe(0);
 		});
+		
+		it('should remove an item on remove()', function(){
+			scope.addItemToList('My item');
+			expect(scope.todoArray.length).toBe(1);
+			scope.removeItem();
+		});
 	});
-	
-	/*
-	describe('Removing an item', function(){
-		it('should remove specific string from array when deleted');
-	});
-	*/
 });

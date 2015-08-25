@@ -3,23 +3,26 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body ng-app="todoApp">
-	
-	<div ng-controller="AddItemContr">
-		<h1>Todo List</h1>
-		
-		<div>
+
+	<div ng-controller="AddItemContr" class="todoApp">
+		<header>
+			<h1>Todo List</h1><h3>{{ listName }}</h3>
+		</header>
+		<div class="lnav">
 			<h2>Add New Item</h2>
 			<form>
+				<input type="text" placeholder="List Name" ng-model="listName">
 				<input type="text" ng-model="toBeAdded">
 				<button ng-click="addItemToList(toBeAdded)">Submit</button>
 			</form>
 		</div>
-		<div>
+		<div class="container">
 			<h2>Todo List</h2>
 			<ul>
-				<li ng-repeat="item in todoArray">{{ item  }}</li>
+				<li ng-repeat="item in todoArray track by $index"><span>{{ item  }}</span> <i class="fa fa-times" ng-click="remove()"></i></li>
 			</ul>
 		</div>
 	</div>
